@@ -44,8 +44,22 @@ const cliente = {
 // cliente.retitar(60);
 // console.log(`Saldo após a retirada de 60 Reais é de: ${cliente.saldo}R$ Reais`);
 
-cliente.adicionarDependente('Theo', 'filho', '10/10/2019')
-console.log(cliente)
+// cliente.adicionarDependente('Theo', 'filho', '10/10/2019')
+// console.log(cliente)
 
-cliente.removerDependente('Vitor')
-console.log(cliente)
+// cliente.removerDependente('Vitor')
+// console.log(cliente)
+
+
+// const cliente1 = cliente;
+// // Altera o valor do primeiro objeto, fazendo referencia ao original
+// cliente1.nome = 'Fabricio'
+// console.log(cliente)
+// console.log(cliente1)
+
+
+// Criando um novo obejto, fazendo a cópia de outro.
+const cliente2 = Object.create(cliente)
+cliente2.nome = 'fafa'
+console.log(cliente2.nome)
+console.log(cliente.nome)
