@@ -16,7 +16,7 @@ const cliente = {
             dataNasc: '06/04/2016'
         },
     ],
-    saldo: 400,
+    saldo: 500,
 
     // Ações em um objeto, mais conhecido como 'métodos'
     depositar: function(valor) {
@@ -45,3 +45,14 @@ oferecerSeguro(cliente);
 // Este exemplo exibe propriedade e valor do objeto em um array
 // console.log(Object.entries(cliente));
 
+const oferecerEmprestimo = (obj => {    
+    const propriedadesClientes = Object.keys(obj);
+    // console.log(propriedadesClientes);
+    if(propriedadesClientes.includes('saldo')) {
+        if(obj.saldo <= 400) {
+            console.log('Temos uma oferta especial para você!');
+        }
+    }
+})
+
+oferecerEmprestimo(cliente);
