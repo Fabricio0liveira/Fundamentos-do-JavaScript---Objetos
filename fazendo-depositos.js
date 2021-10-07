@@ -1,3 +1,5 @@
+// Como acessar os campos e alterar valores de objetos...
+
 const cliente = {
     nome: 'Fabiana',
     idade: 29,

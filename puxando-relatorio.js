@@ -16,8 +16,7 @@ const cliente = {
 // console.log(`Saldo atualizado após o depósito é de: ${cliente.saldo}R$ Reais`);
 
 // Método 'for in' mais voltado para objetos.
-// Percorrendo um obejto
-
+// Percorrendo um objeto
 let relatorio = '';
 for(let info in cliente) {
     // Fazendo a verificação para não exibir para o cliente os métodos ou objetos e sim somente como 'string'

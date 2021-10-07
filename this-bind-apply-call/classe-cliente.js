@@ -13,7 +13,7 @@ class Cliente {
     }
 
     exibirSaldo() {
-        console.log(`Saldo atual: ${this.saldo} Reais`)
+        console.log(`Saldo atual: ${this.saldo} Reais \n`)
     }
 }
 
@@ -23,3 +23,26 @@ console.log(fabiana)
 
 fabiana.depositar(200)
 fabiana.exibirSaldo()
+
+class ClienteVip extends Cliente{
+    constructor(nome, email, cpf, saldo, saldoVip, agencia) {
+        super(nome, email, cpf, saldo)
+        this.saldoVip = saldoVip
+        this.agencia = agencia
+    }
+
+    juros() {
+        this.saldoVip += this.saldo * 2
+    }
+
+    exibirSaldoVip() {
+        console.log(`O saldo de clientes Vips é o seu saldo normal multiplicado por 2. SaldoVip atual: ${this.saldoVip} Reais.`)
+    }
+}
+
+const fabricio = new ClienteVip('Fabricio De Oliveira', 'fabricio@email.com', '07729742953', 200, 0, '4218')
+console.log(fabricio)
+
+fabricio.juros()
+fabricio.exibirSaldo()
+fabricio.exibirSaldoVip()
