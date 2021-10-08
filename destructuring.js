@@ -12,6 +12,7 @@ console.log(num1, num2, outrosNumeros); // 1, 2 [3, 4, 5]
 
 // Outro exemplo 
 // Passando valor padrão caso a variável não tenha nenhum valor atribuído
+// Será utilizado somente se não existir nenhum valor atribuído
 const [nome1 = 'fabricio'] = [];
 console.log(nome1);
 
@@ -42,7 +43,7 @@ function imprimirDados(dados) {
 imprimirDados(pessoaComTelefone);
 
 // Segundo exemplo
-function imprimirDados1({nome, telefone}) {
-    console.log(nome, telefone);
+function imprimirDados1({nome, idade, telefone}) {
+    console.log(nome, idade, telefone);
 }
 imprimirDados1(pessoaComTelefone);
